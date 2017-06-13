@@ -8,6 +8,7 @@
 @blue-shadow: #098aa9;
 
 @title-color: #2f257d;
+@tab-color: #563743;
 
 @btn-radius: 10px;
 
@@ -48,7 +49,7 @@ h1, h2, h3, h4, h5, h6{ font-family: @f-r; }
     -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between;
  }
 
-.main-block{ float: left; width: 180px; padding: 10px; box-sizing: border-box; background: #fff; 
+.main-block{ float: left; width: 180px; padding: 10px; box-sizing: border-box; background: #fff; box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
     p{ float: left; width: 100%; font-size: 12px; color: #000; }
     
     &__img{ float: left; width: 100%; height: 150px; margin-bottom: 8px; background: #ae1212; }
@@ -58,4 +59,32 @@ h1, h2, h3, h4, h5, h6{ font-family: @f-r; }
     &__img_4{ background: url("../img/img4.jpg") center center no-repeat; background-size: cover; }
 
 }
+
+.section-tabs{ float: left; width: 100%; margin-top: 60px; }
+
+.tab{ float: left; width: 420px; 
+    &_right{ float: right; }
+}
+
+.tab-nav{ float: left; width: 190px; height: 50px; box-sizing: border-box; padding-top: 16px; font-family: @f-b; font-size: 15px; background: #fff; opacity: 0.4; text-align: center; color: @tab-color; -webkit-border-radius: @btn-radius @btn-radius 0 0; -moz-border-radius: @btn-radius @btn-radius 0 0; border-radius: @btn-radius @btn-radius 0 0; -webkit-transition: .3s linear;transition: .3s linear; cursor: pointer; box-shadow: 1px 0px 1px rgba(0,0,0,0.2);
+    &_active{ opacity: 1; }
+    &:hover{ opacity: 0.7; }
+}
+
+.tab-main{ float: left; width: 100%; background: #fff; display: none; box-sizing: border-box; padding: 30px; box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    &_active{ display: block; }
+}
+
+.tab-block{ float: left; width: 310px; padding: 20px 0; border-bottom: 1px solid #dbd1ce;
+    &__img{ float: left; width: 80px; height: 80px; background: #ae1212; margin-right: 19px;
+        &_1{ background: url("../img/img1.jpg") center center no-repeat; background-size: cover; }
+        &_2{ background: url("../img/img2.jpg") center center no-repeat; background-size: cover; }
+        &_3{ background: url("../img/img3.jpg") center center no-repeat; background-size: cover; }
+        &_4{ background: url("../img/img4.jpg") center center no-repeat; background-size: cover; }
+    }
+    
+    h3{ float: left; width: ~"calc(100% - 100px)"; font-size: 17px; font-family: @f-r; color: @tab-color; }
+    p{ float: left;width: ~"calc(100% - 100px)"; margin-top: 8px; font-size: 15px; color: #a8979a;}
+}
+
 
