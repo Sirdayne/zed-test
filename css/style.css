@@ -22,7 +22,7 @@ h6 {
 .container {
   display: block;
   margin: 47px auto;
-  width: 1023px;
+  width: 1024px;
   height: auto;
   box-sizing: border-box;
   padding: 30px 25px;
@@ -196,6 +196,9 @@ h6 {
   box-sizing: border-box;
   padding: 30px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 0 10px 10px;
+  -moz-border-radius: 0 10px 10px;
+  border-radius: 0 10px 10px;
 }
 .tab-main_active {
   display: block;
@@ -242,4 +245,54 @@ h6 {
   margin-top: 8px;
   font-size: 15px;
   color: #a8979a;
+}
+.tab-block:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.tab-btns {
+  float: left;
+  width: 100%;
+  margin-top: 50px;
+}
+.btn-tab {
+  float: left;
+  width: 170px;
+  height: 50px;
+  font-size: 17px;
+  font-family: "NotoSans-Bold";
+  color: #fff;
+  background: #0bacd3;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 1px #098aa9;
+  -webkit-transition: .4s linear;
+  transition: .4s linear;
+}
+.btn-tab:hover {
+  background: #29b6d8;
+}
+.btn-tab:focus {
+  background: #0a97b9;
+}
+.btn-tab:active {
+  background: #0a97b9;
+}
+.tab-icons {
+  float: right;
+  width: auto;
+  margin-top: 12px;
+}
+.tab-icons img {
+  float: left;
+  margin-left: 4px;
+  height: 25px;
+  width: auto;
+  cursor: pointer;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+.tab-icons img:hover {
+  opacity: 0.7;
 }

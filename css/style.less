@@ -6,6 +6,9 @@
 
 @blue: #0bacd3;
 @blue-shadow: #098aa9;
+@blue-hover: #29b6d8;
+@blue-clicked: #0a97b9;
+
 
 @title-color: #2f257d;
 @tab-color: #563743;
@@ -22,7 +25,7 @@ h1, h2, h3, h4, h5, h6{ font-family: @f-r; }
 
 .wrap{ float: left; width: 100%; }
 
-.container{ display: block; margin: 47px auto; width: 1023px; height: auto; box-sizing: border-box; padding: 30px 25px; background: url("../img/grid.png") center center no-repeat; background-size: cover; }
+.container{ display: block; margin: 47px auto; width: 1024px; height: auto; box-sizing: border-box; padding: 30px 25px; background: url("../img/grid.png") center center no-repeat; background-size: cover; }
 
 
 /* VERSATILITY */
@@ -71,7 +74,7 @@ h1, h2, h3, h4, h5, h6{ font-family: @f-r; }
     &:hover{ opacity: 0.7; }
 }
 
-.tab-main{ float: left; width: 100%; background: #fff; display: none; box-sizing: border-box; padding: 30px; box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+.tab-main{ float: left; width: 100%; background: #fff; display: none; box-sizing: border-box; padding: 30px; box-shadow: 1px 1px 1px rgba(0,0,0,0.2); -webkit-border-radius: 0 @btn-radius @btn-radius; -moz-border-radius: 0 @btn-radius @btn-radius; border-radius: 0 @btn-radius @btn-radius;
     &_active{ display: block; }
 }
 
@@ -85,6 +88,20 @@ h1, h2, h3, h4, h5, h6{ font-family: @f-r; }
     
     h3{ float: left; width: ~"calc(100% - 100px)"; font-size: 17px; font-family: @f-r; color: @tab-color; }
     p{ float: left;width: ~"calc(100% - 100px)"; margin-top: 8px; font-size: 15px; color: #a8979a;}
+
+    &:last-child{ border-bottom: none; padding-bottom: 0; }
 }
 
+.tab-btns{ float: left; width: 100%; margin-top: 50px; }
 
+.btn-tab{ float: left; width: 170px; height: 50px; font-size: 17px; font-family: @f-b; color: #fff; background: @blue; -webkit-border-radius: @btn-radius; -moz-border-radius: @btn-radius; border-radius: @btn-radius; box-shadow: 0px 1px 1px @blue-shadow; -webkit-transition: .4s linear;transition: .4s linear;
+    &:hover{ background: @blue-hover; }
+    &:focus{ background: @blue-clicked; }
+    &:active{ background: @blue-clicked; }
+}
+
+.tab-icons{ float: right; width: auto; margin-top: 12px;
+    img{ float: left; margin-left: 4px; height: 25px; width: auto; cursor: pointer; -webkit-transition: .3s linear;transition: .3s linear;
+        &:hover{ opacity: 0.7; }
+    }
+}
