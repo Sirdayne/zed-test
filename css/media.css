@@ -38,7 +38,9 @@
     .header__logo{ width: 90px; }
     .header h1{ margin-top: 21px; margin-left: 14px; }
 
-    .header__languages, .languages{ width: 130px; }
+    .header__languages, .languages{ width: 110px; }
+    .header__languages{ padding: 16px 12px 0; }
+    .lang-box{ padding: 16px 12px 0; }
     .header__languages img{ height: 7px; width: auto; margin-top: 8px; }
 }
 
